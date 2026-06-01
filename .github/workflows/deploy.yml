@@ -34,3 +34,4 @@ jobs:
           sleep 5
           echo "Provera iz fajla: docker-compose/docker-compose.${{ env.ENV_NAME }}.yml"
           docker compose -f docker-compose/docker-compose.${{ env.ENV_NAME }}.yml exec -T app env | grep APP_ENV
+          docker compose -f docker-compose/docker-compose.${{ env.ENV_NAME }}.yml exec -T app env | grep APP_KOMENTAR

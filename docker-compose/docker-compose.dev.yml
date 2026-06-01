@@ -9,3 +9,4 @@ services:
       - ./src:/usr/share/nginx/html
     environment:
       - APP_ENV=dev
+      - APP_KOMENTAR=Nalazimo se u dev okruzenju

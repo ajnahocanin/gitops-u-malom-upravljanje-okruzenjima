@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GitOps Mini Project</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .env-badge {
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 2em;
+        color: white;
+      }
+      .dev {
+        background-color: #f39c12;
+      }
+      .test {
+        background-color: #3498db;
+      }
+      .prod {
+        background-color: #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>GitOps Demonstrator</h1>
+    <div id="env-display" class="env-badge">Ucitavanje...</div>
+
+    <script>
+      const environment =
+        window.location.hostname === "localhost" ? "dev" : "unknown";
+
+      const display = document.getElementById("env-display");
+      display.innerText =
+        "Trenutno okruzenje: " + ("__ENV_PLACEHOLDER__" || "Nepoznato");
+      display.className = "env-badge " + ("__ENV_PLACEHOLDER__" || "dev");
+    </script>
+  </body>
+</html>
